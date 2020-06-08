@@ -7,16 +7,9 @@
     <meta name="description" content="Уютная гостиница для котов и кошек">
     <meta name="viewport" content="width=device-width">
     <style>
-        .header {
-            width: 100%;
-
-        }
-
-        .header__content {
-            width: 1366px;
-            height: 76px;
-            margin-left: auto;
-            margin-right: auto;
+        @font-face {
+            font-family: LatoRegular;
+            src: url("./src/fonts/Lato-Regular.woff");
         }
 
         body,
@@ -29,6 +22,58 @@
         html {
             margin: auto;
         }
+
+        .header,
+        .main-banner {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1366px;
+        }
+
+        .header__content {
+            width: calc(100%-196px);
+            height: 76px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 98px;
+            padding-right: 98px;
+        }
+
+        #header__menu {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #header__logo_img {
+            width: 63px;
+            height: 52px;
+        }
+
+        .header__menu_point {
+            font-family: LatoRegular;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+
+        .main-banner {
+            max-width: 1366px;
+            height: 508px;
+
+            background-image: url("./src/img/png/cat_banner.png");
+            background-size: auto;
+            background-position: center;
+
+        }
+
     </style>
 </head>
 
@@ -37,7 +82,6 @@
         <div class="header__content">
             <div id="header__logo">
                 <img id="header__logo_img" src="./src/img/png/header_logo.png" alt="">
-                <div id="header__logo_text">КОТЕЙКА</div>
             </div>
             <div id="header__menu">
                 <div class="header__menu_point">Почему мы?</div>
@@ -47,6 +91,14 @@
             </div>
         </div>
     </div>
+    <div class="main-banner">
+
+        <div id="main-banner__content">pop
+
+            <div id="main-banner__button"><div id="main-banner__button-text">Забронировать</div><div id="main-banner__button-img"><img src="" alt=""></div></div>
+        </div>
+    </div>
+
 </body>
 
 </html>
