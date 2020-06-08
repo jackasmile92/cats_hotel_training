@@ -6,112 +6,8 @@
     <title>Котейка</title>
     <meta name="description" content="Уютная гостиница для котов и кошек">
     <meta name="viewport" content="width=device-width">
-    <style>
-        @font-face {
-            font-family: LatoRegular;
-            src: url("./src/fonts/Lato-Regular.woff");
-        }
-
-        body,
-        html {
-            margin: 0px;
-            width: 100%;
-            background-color: #FFFEFD;
-        }
-
-        html {
-            margin: auto;
-        }
-
-        .header,
-        .main-banner {
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1366px;
-        }
-
-        .header__content {
-            width: calc(100%-196px);
-            height: 76px;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 98px;
-            padding-right: 98px;
-        }
-
-        #header__menu {
-            display: flex;
-            flex-direction: row;
-        }
-
-        #header__logo_img {
-            width: 63px;
-            height: 52px;
-        }
-
-        .header__menu_point {
-            font-family: LatoRegular;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 19px;
-            display: flex;
-            align-items: center;
-            margin-left: 30px;
-        }
-
-        .main-banner {
-            max-width: 1366px;
-            height: 508px;
-
-            background-image: url("./src/img/png/cat_banner.png");
-            background-size: auto;
-            background-position: center;
-
-        }
-
-        #main-banner__button {
-            width: 206px;
-            height: 50px;
-            background-color: #FFFEFD;
-            box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
-            border-radius: 25px;
-
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        #main-banner__text-city {
-
-            font-family: LatoRegular;
-            font-size: 14px;
-            line-height: 17px;
-            color: #1A212F;
-        }
-
-        #main-banner__text-cat img {
-            width: 265px;
-            height: 43px;
-        }
-
-        #main-banner__text-disc {
-            font-family: LatoRegular;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
-            display: flex;
-            align-items: center;
-
-            color: #1A212F;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
@@ -142,6 +38,68 @@
             </div>
         </div>
     </div>
+
+    <div class="advantages">
+        <div id="advantages__paw"><img src="./src/img/png/paw_background.png" alt=""></div>
+        <div id="advantages__content">
+            <div id="advantages__title">Почему мы?</div>
+            <div id="advantages__points">
+                <div class="advantages__point">
+                    <div class="advantages__point-img"><img src="./src/img/png/icon_1.png" alt=""></div>
+                    <div class="advantages__point-title">Комфортная температура</div>
+                    <div class="advantages__point-text">
+                        Во всех номерах поддерживается<br>
+                        комфортная температура в пределах<br>
+                        23 - 25 градусов. В каждом номере<br>
+                        можно дополнительно отрегулировать<br>
+                        температуру.</div>
+                </div>
+                <div class="advantages__point">
+                    <div class="advantages__point-img"><img src="./src/img/png/icon_2.png" alt=""></div>
+                    <div class="advantages__point-title">Видеонаблюдение</div>
+                    <div class="advantages__point-text">
+                        Мы предоставляем доступ в нашу<br>
+                        систему. Вы сможете следить<br>
+                        за своим питомцем со своего<br>
+                        смартфона или компьютера.</div>
+                </div>
+                <div class="advantages__point">
+                    <div class="advantages__point-img"><img src="./src/img/png/icon_3.png" alt=""></div>
+                    <div class="advantages__point-title">Услуги Зоотакси</div>
+                    <div class="advantages__point-text">
+                        Мы приедем за вашим питомцем<br>
+                        в любой район Санкт-Петербурга.
+                    </div>
+                </div>
+                <div class="advantages__point">
+                    <div class="advantages__point-img"><img src="./src/img/png/icon_4.png" alt=""></div>
+                    <div class="advantages__point-title">Сбалансированное питание</div>
+                    <div class="advantages__point-text">
+                        Вы можете привезти свой корм<br>
+                        или доверить рацион своего<br>
+                        питомца нашим профессионалам.</div>
+                </div>
+                <div class="advantages__point">
+                    <div class="advantages__point-img"><img src="./src/img/png/icon_5.png" alt=""></div>
+                    <div class="advantages__point-title">Ежедневные прогулки</div>
+                    <div class="advantages__point-text">
+                        По вашему желанию мы выгуливаем<br>
+                        вашего питомца два раза в день
+                        на специализированной закрытой<br>
+                        территории.</div>
+                </div>
+                <div class="advantages__point">
+                    <div class="advantages__point-img"><img src="./src/img/png/icon_6.png" alt=""></div>
+                    <div class="advantages__point-title">Лучшие ветеринары</div>
+                    <div class="advantages__point-text">
+                        В гостинице 24 часа дежурит<br>
+                        ветеринарный врач, который окажет<br>
+                        любую помощь в случае необходимости.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

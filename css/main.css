@@ -1,0 +1,223 @@
+body,
+html {
+    margin: 0px;
+    width: 100%;
+    background-color: #FFFEFD;
+}
+
+html {
+    margin: auto;
+}
+
+.header,
+.main-banner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1366px;
+}
+
+.header__content {
+    width: calc(100%-196px);
+    height: 76px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 98px;
+    padding-right: 98px;
+}
+
+#header__menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#header__logo_img {
+    width: 63px;
+    height: 52px;
+}
+
+.header__menu_point {
+    font-family: LatoRegular;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    color: #1A212F;
+}
+
+.main-banner {
+    max-width: 1366px;
+    height: 504px;
+
+    background-image: url("../src/img/png/cat_banner.png");
+    background-size: auto;
+    background-position: center;
+
+}
+
+#main-banner__button {
+    width: 206px;
+    height: 50px;
+    background-color: #FFFEFD;
+    box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+#main-banner__text-city {
+
+    font-family: LatoRegular;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1A212F;
+}
+
+#main-banner__text-cat img {
+    width: 265px;
+    height: 43px;
+    margin-top: 15px;
+}
+
+#main-banner__text-disc {
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #1A212F;
+    margin-top: 25px;
+}
+
+#main-banner__content {
+    position: absolute;
+    margin-top: 153px;
+    margin-left: 198px;
+}
+
+#main-banner__button-text {
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+
+    color: #1A212F;
+    margin-left: 30px;
+}
+
+#main-banner__button-img {
+    margin-top: 2px;
+    margin-right: 7px;
+}
+
+#main-banner__button-img img {
+    width: 36px;
+    height: 36px;
+}
+
+.advantages {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#advantages__paw {
+    width: 100%;
+    position: absolute;
+    margin-top: -140px;
+    
+}
+
+#advantages__paw img {
+    float: right;
+    z-index: 1;
+}
+
+#advantages__content {
+    width: calc(100%-196px);
+
+
+    padding-left: 98px;
+    padding-right: 98px;
+    
+}
+
+#advantages__points {
+    width: calc(100%-196px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advantages__point {
+    width: 370px;
+    height: 321px;
+    padding-top: 30px;
+    margin-top: 20px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.advantages__point-text {
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+
+.advantages__point-img {
+    margin-left: 30px;
+}
+
+.advantages__point-img img {
+    width: 91px;
+    height: 91px;
+}
+
+.advantages__point-title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+#advantages__title {
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+
+    margin-top: 140px;
+    margin-bottom: 50px;
+}

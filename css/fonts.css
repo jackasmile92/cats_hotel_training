@@ -1,0 +1,9 @@
+@font-face {
+    font-family: LatoRegular;
+    src: url("../src/fonts/Lato-Regular.woff");
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url("../src/fonts/Rubikbold.woff");
+}
