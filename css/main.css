@@ -479,14 +479,134 @@ html {
 #feedback {
     overflow-x: hidden;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1366px;
 }
 
-@media only screen and (min-width: 1366px) {
-    #feedback {
-        overflow-x: visible;
-    }
-}
 
 #feedback__title {
     margin-top: 257px;
+}
+
+/*contact*/
+
+#contact__map_cat {
+    position: absolute;
+    margin-left: 257px;
+    margin-top: 255px;
+
+}
+
+#contact__map_cat img {
+    box-shadow: 0px 4px 15px rgba(147, 147, 147, 0.25);
+    height: 58px;
+}
+
+#contact__map_img {
+    position: absolute;
+}
+
+#contact__map_img img {
+    width: 798px;
+    height: 580px;
+}
+
+#contact__info {
+    width: 568px;
+    height: 580px;
+    background: #FAC663;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1366px;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+}
+
+
+#contact__info_content {
+    margin-left: 198px;
+    margin-top: 70px;
+}
+
+#contact__content_title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+
+    /* Текст */
+
+    color: #1A212F;
+}
+
+.contact__point_title {
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+
+    /* Текст */
+
+    color: #1A212F;
+    margin-bottom: 15px;
+}
+
+.contact__point_content {
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contact__content_point,#contact__content_social {
+    margin-top: 25px;
+}
+
+#contact__social_icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__social{
+    margin-right: 20px;
+}
+
+
+@media only screen and (max-width: 950px) {
+    #contact {
+        flex-direction: column;
+    }
+    #contact__info{
+        width:100%;
+    }
+
+    #contact__map{
+        display: none;
+    }
+
+    .room__cat{
+        display: none;
+    }
+
+    .room__rect{
+        margin-left: auto;
+    }
+
 }
