@@ -575,16 +575,17 @@ html {
     margin-top: 10px;
 }
 
-.contact__content_point,#contact__content_social {
+.contact__content_point,
+#contact__content_social {
     margin-top: 25px;
 }
 
-#contact__social_icons{
+#contact__social_icons {
     display: flex;
     flex-direction: row;
 }
 
-.contact__social{
+.contact__social {
     margin-right: 20px;
 }
 
@@ -593,20 +594,61 @@ html {
     #contact {
         flex-direction: column;
     }
-    #contact__info{
-        width:100%;
+
+    #contact__info {
+        width: 100%;
     }
 
-    #contact__map{
+    #contact__map {
         display: none;
     }
 
-    .room__cat{
+    .room__cat {
         display: none;
     }
 
-    .room__rect{
+    .room__rect {
         margin-left: auto;
     }
 
+}
+
+#footer .header__content {
+    padding-left: 198px;
+    width: calc(100%-296px);
+}
+
+hr {
+    border: 1px solid #EFEFEF;
+}
+
+#footer__info {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    flex-direction: row;
+
+    color: #8F8F8F;
+
+    width: calc(100%-296px);
+    height: 49px;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 198px;
+    padding-right: 98px;
+}
+
+#footer__info_1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#vector {
+    margin-right: 5px;
 }
