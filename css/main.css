@@ -133,6 +133,7 @@ html {
 
 .advantages {
     width: 100%;
+    max-width: 1366px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -140,10 +141,20 @@ html {
 #advantages__paw,
 #feedback__paw {
     width: 100%;
+    max-width: 1366px;
     position: absolute;
-    margin-top: -140px;
 
 }
+
+#advantages__paw{
+    margin-top: -140px;
+}
+
+#feedback__paw{
+    margin-top: 140px;
+}
+
+
 
 #advantages__paw img,
 #feedback__paw img {
@@ -226,6 +237,12 @@ html {
 
     margin-top: 140px;
     margin-bottom: 50px;
+}
+#rooms{
+    width:100%;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #rooms__content {
@@ -611,6 +628,13 @@ html {
         margin-left: auto;
     }
 
+}
+
+#footer{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1366px;
 }
 
 #footer .header__content {
