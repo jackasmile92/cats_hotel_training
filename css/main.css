@@ -62,7 +62,7 @@ html {
 
 }
 
-#main-banner__button {
+.main-banner__button {
     width: 206px;
     height: 50px;
     background-color: #FFFEFD;
@@ -109,7 +109,7 @@ html {
     margin-left: 198px;
 }
 
-#main-banner__button-text {
+.main-banner__button-text {
     font-family: LatoRegular;
     font-style: normal;
     font-weight: 600;
@@ -121,12 +121,12 @@ html {
     margin-left: 30px;
 }
 
-#main-banner__button-img {
+.main-banner__button-img {
     margin-top: 2px;
     margin-right: 7px;
 }
 
-#main-banner__button-img img {
+.main-banner__button-img img {
     width: 36px;
     height: 36px;
 }

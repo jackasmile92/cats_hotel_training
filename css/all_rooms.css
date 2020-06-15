@@ -1,0 +1,124 @@
+#promo-banner {
+    margin-top: 140px;
+    width: 100%;
+}
+
+#promo-banner__background {
+    width: 1170px;
+    height: 379px;
+    background-image: url("../src/img/png/cat_promo.png");
+    background-size: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#promo__text_title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+
+    /* Текст */
+
+    color: #1A212F;
+}
+
+#promo__text_free {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+}
+
+#promo__text_smol {
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    display: flex;
+    align-items: center;
+}
+
+#promo-banner__content {
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 78px;
+}
+
+.main-banner__button {
+    margin-top: 30px;
+}
+
+#searching__title_button {
+    width: 174px;
+    height: 35px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+    border-radius: 25px;
+
+
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+#searching__button_content {
+    position: absolute;
+    display: flex;
+
+    flex-direction: row;
+    justify-items: baseline;
+
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+
+#button__text {
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+#searching__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+
+}
+
+#searching{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1366px;
+}
+
+#searching__content_title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#searching__content{
+    width: calc(100%-196px);
+    padding-left: 98px;
+    padding-right: 98px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
