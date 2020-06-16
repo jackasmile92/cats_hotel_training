@@ -72,7 +72,14 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
+
+    border: none;
 }
+
+#searching__title_button .select-selected {
+    margin-right: 10px;
+}
+
 
 #searching__button_content {
     position: absolute;
@@ -201,6 +208,152 @@
     margin-top: 42px;
 }
 
-#searching__body{
-    margin-top: 60px;
+#searching__body {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+/*select*/
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 12px;
+    height: 6px;
+    /*   width: 0;
+    height: 0;
+ border: 6px solid transparent;
+    border-color: black transparent transparent transparent;*/
+    background-image: url("../src/img/png/open.png");
+    background-size: 12px 6px;
+    margin-right: 14px;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    background-image: url("../src/img/png/close.png");
+    background-size: 12px 6px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+    border-radius: 4px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+
+/*rooms*/
+.result__room {
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    border-radius: 6px;
+    width: 270px;
+    margin-top: 30px;
+}
+
+.result__room_body {
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #1A212F;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+
+}
+
+.result__room_title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.result__room_equip {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.result__room_text {
+    margin-top: 15px;
+}
+
+.result__room_price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    /* Текст */
+
+    color: #1A212F;
+    margin-left: 10px;
+}
+
+.room_equip {
+    margin-left: 6px;
+}
+
+.room_equip__content {
+    margin-left: 4px;
+}
+
+/*уъу*/
+#searching__result_content {
+    display: flex;
+    flex-direction: row;
+    width: 870px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#searching__result {
+    width: 870px;
 }
