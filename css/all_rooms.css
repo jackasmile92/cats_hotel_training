@@ -290,6 +290,9 @@
     width: 270px;
     margin-top: 30px;
 }
+.result__room_img img {
+    width: 268px;
+}
 
 .result__room_body {
     font-family: LatoRegular;
@@ -297,11 +300,11 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-
     color: #1A212F;
     padding-top: 25px;
     padding-left: 20px;
     padding-bottom: 25px;
+    width: 250px;
 
 }
 
