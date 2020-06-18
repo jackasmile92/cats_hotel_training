@@ -205,6 +205,7 @@
     </div>
     <script src="./js/input.js"></script>
     <script>
+        var element1 = document.getElementById("searching__result_content");
         var x, i, j, l, ll, selElmnt, a, b, c;
         /*look for any elements with the class "custom-select":*/
         x = document.getElementsByClassName("custom-select");
@@ -242,15 +243,30 @@
                                 y[k].removeAttribute("class");
                             }
                             this.setAttribute("class", "same-as-selected");
-                            //
-                            console.log(h.innerHTML+' '+ i);
-                            var element1 = document.getElementById("searching__result_content");
+                            //console.log(h.innerHTML + ' ' + i);
+                            
+                            
                             element1.innerHTML = "";
+                            var sort;
+
+                            if (i == 0 || i == 1) {
+                                sort = sortRooms(input, 'area', 'ASC');
+                            }
+                            if (i == 2) {
+                                sort = sortRooms(input, 'area', 'DESC');
+                            }
+                            if (i == 3) {
+                                sort = sortRooms(input, 'price', 'ASC');
+                            }
+                            if (i == 4) {
+                                sort = sortRooms(input, 'price', 'DESC');
+                            }
+
                             sortedInput = sortRooms(sortedInput, 'area', 'DESC');
 
-                            for (let i = 0; i < sortedInput.length; i++) {
+                            for (let i = 0; i < sort.length; i++) {
 
-                                element1.appendChild(generateRoom(sortedInput[i]));
+                                element1.appendChild(generateRoom(sort[i]));
                             } //
                             break;
                         }
