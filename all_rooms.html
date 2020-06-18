@@ -118,7 +118,7 @@
                 </div>
                 <div id="searching__result">
                     <div id="searching__result_content">
-                       
+
 
                     </div>
                 </div>
@@ -242,6 +242,16 @@
                                 y[k].removeAttribute("class");
                             }
                             this.setAttribute("class", "same-as-selected");
+                            //
+                            console.log(h.innerHTML+' '+ i);
+                            var element1 = document.getElementById("searching__result_content");
+                            element1.innerHTML = "";
+                            sortedInput = sortRooms(sortedInput, 'area', 'DESC');
+
+                            for (let i = 0; i < sortedInput.length; i++) {
+
+                                element1.appendChild(generateRoom(sortedInput[i]));
+                            } //
                             break;
                         }
                     }

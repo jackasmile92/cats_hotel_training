@@ -4,7 +4,8 @@ let input = [{
         image: "econom_cat.png",
         size: "Размеры (ШхГхВ) - 90х70х180 см",
         square: "Площадь - 0,63 м2",
-        price: "100₽",
+        area: 0.63,
+        price: 100,
         equipment: ["empty.png"]
 
     },
@@ -14,7 +15,8 @@ let input = [{
         image: "econom_plus_cat.png",
         size: "Размеры (ШхГхВ) - 90х100х180 см",
         square: "Площадь - 0,90 м2",
-        price: "200₽",
+        area: 0.90,
+        price: 200,
         equipment: ["bed.png", "claw.png"]
 
     },
@@ -24,7 +26,8 @@ let input = [{
         image: "comfort_cat.png",
         size: "Размеры (ШхГхВ) - 100х125х180 см",
         square: "Площадь - 1,13 м2",
-        price: "250₽",
+        area: 1.13,
+        price: 250,
         equipment: ["bed.png", "claw.png", "games.png"]
 
 
@@ -35,7 +38,8 @@ let input = [{
         image: "suite_cat.png",
         size: "Размеры (ШхГхВ) - 125х125х180 см",
         square: "Площадь - 1,56 м2",
-        price: "350₽",
+        area: 1.56,
+        price: 350,
         equipment: ["bed.png", "claw.png", "games.png"]
 
 
@@ -46,7 +50,8 @@ let input = [{
         image: "lux_cat.png",
         size: "Размеры (ШхГхВ) - 160х160х180 см",
         square: "Площадь - 2,56 м2",
-        price: "500₽",
+        area: 2.56,
+        price: 500,
         equipment: ["bed.png", "claw.png", "games.png", "house.png"]
 
 
@@ -58,7 +63,8 @@ let input = [{
         image: "super_lux_cat.png",
         size: "Размеры (ШхГхВ) - 180х160х180 см",
         square: "Площадь - 2,88 м2",
-        price: "600₽",
+        area: 2.88,
+        price: 600,
         equipment: ["bed.png", "claw.png", "games.png", "house.png"]
 
     }
@@ -129,7 +135,7 @@ function generateRoom(room) {
     roomtext_5_2.className = "room_equip__content";
 
     let rommEq = room.equipment;
-   
+
     for (let i = 0; i < rommEq.length; i++) {
 
         roomtext_5_2.appendChild(addIcons(rommEq[i]));
@@ -151,7 +157,7 @@ function generateRoom(room) {
 
     let roomtext_3_2 = document.createElement('div');
     roomtext_3_2.className = "result__room_price";
-    roomtext_3_2.innerHTML = room.price;
+    roomtext_3_2.innerHTML = room.price + '₽';
 
     roomtext_3.appendChild(roomtext_3_1);
     roomtext_3.appendChild(roomtext_3_2);
@@ -159,8 +165,8 @@ function generateRoom(room) {
 
     roomResult.appendChild(roomtext_3);
 
-    
-    
+
+
 
 
     let roomtext_4 = document.createElement('div');
@@ -183,9 +189,71 @@ function generateRoom(room) {
     return roomCard;
 }
 
+function getRoomFromArrayById(rooms, id) {
+    for (let i = 0; i < rooms.length; i++) {
+        if (rooms[i].id == id) {
+            return rooms[i];
+        }
+    }
+}
+
+function sortRooms(rooms, sortBy = 'area', orderInd = 'ASC') {
+    let sortedArray = [];
+
+    let idArray = [];
+    for (let i in rooms) {
+        idArray.push(rooms[i].id);
+    }
+
+    if (rooms.length > 0) {
+        let maxId;
+        let maxRoom;
+
+        for (let i = 0; i < idArray.length; i++) {
+            maxId = i;
+            maxRoom = getRoomFromArrayById(rooms, idArray[i]);
+
+            for (let j = (i + 1); j < idArray.length; j++) {
+                let maxRoomNew = getRoomFromArrayById(rooms, idArray[j]);
+                if (orderInd == 'DESC') {
+                    if (maxRoomNew.area > maxRoom.area && sortBy == 'area') {
+                        maxId = j;
+                        maxRoom = maxRoomNew;
+                    }
+                    if (maxRoomNew.price > maxRoom.price && sortBy == 'price') {
+                        maxId = j;
+                        maxRoom = maxRoomNew;
+                    }
+                }
+                if (orderInd == 'ASC') {
+                    if (maxRoomNew.area < maxRoom.area && sortBy == 'area') {
+                        maxId = j;
+                        maxRoom = maxRoomNew;
+                    }
+                    if (maxRoomNew.price < maxRoom.price && sortBy == 'price') {
+                        maxId = j;
+                        maxRoom = maxRoomNew;
+                    }
+                }
+            }
+
+            let temp = idArray[i];
+            idArray[i] = idArray[maxId];
+            idArray[maxId] = temp;
+
+            sortedArray.push(maxRoom);
+        }
+
+    }
+
+
+    return sortedArray;
+}
+
 let element = document.getElementById("searching__result_content");
+let sortedInput = input;//sortRooms(input, 'area', 'ASC');
 
-for (let i = 0; i < input.length; i++) {
+for (let i = 0; i < sortedInput.length; i++) {
 
-    element.appendChild(generateRoom(input[i]));
+    element.appendChild(generateRoom(sortedInput[i]));
 }
