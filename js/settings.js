@@ -128,3 +128,19 @@ function settingsArea(id) {
 }
 
 reloadSett();
+
+function isEquiped(room, equipment){
+  var roomEquip = room.equipment;
+
+  for(let i = 0; i < roomEquip.length; i++){
+      if(roomEquip[i] == equipment){
+          console.log(equipment);
+          return true;
+      }
+  }
+
+  return false;
+}
+
+
+var yay = isEquiped(roomsSet[0],"empty.png");

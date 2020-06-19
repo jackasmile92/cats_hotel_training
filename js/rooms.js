@@ -177,11 +177,11 @@ function sortRooms(rooms, sortBy = 'area', orderInd = 'ASC') {
 
     return sortedArray;
 }
-
+/*
 let element = document.getElementById("searching__result_content");
 let sortedInput = input;//sortRooms(input, 'area', 'ASC');
 
 for (let i = 0; i < sortedInput.length; i++) {
 
     element.appendChild(generateRoom(sortedInput[i]));
-}
+}*/
