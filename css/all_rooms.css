@@ -156,6 +156,11 @@
     box-sizing: border-box;
 }
 
+.checkbox_check{
+    margin-left: 3px;
+    margin-top: -1px;
+}
+
 .checkbox__text {
     font-family: LatoRegular;
     font-style: normal;
@@ -170,10 +175,11 @@
 }
 
 .setting__input {
-    width: 100px;
+    width: 70px;
     height: 24px;
     border: 1px solid #E1E1E1;
     box-sizing: border-box;
+    padding-left: 10px;
 }
 
 .setting__input.to {
@@ -289,6 +295,7 @@
     border-radius: 6px;
     width: 270px;
     margin-top: 30px;
+    margin-left: 30px;
 }
 .result__room_img img {
     width: 268px;
@@ -352,11 +359,16 @@
 #searching__result_content {
     display: flex;
     flex-direction: row;
-    width: 870px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 900px;
+    flex-wrap: wrap;/*
+    justify-content: space-between;*/
 }
 
 #searching__result {
-    width: 870px;
+    width: 900px;
+}
+
+
+.setting__checkbox:hover{
+    cursor: pointer;
 }
