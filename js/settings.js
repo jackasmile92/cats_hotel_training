@@ -1,24 +1,27 @@
 let settings = [];
 let roomsSet = [];
+let settEquip = ["empty.png", "bed.png", "claw.png", "games.png", "house.png"];
 
 let setArea = [];
 
 let sortDirection = 0;
 
 let roomAreas = document.getElementsByClassName('roomArea');
+let roomEquips = document.getElementsByClassName('roomEquip');
 
 function reloadSett() {
     settings = [];
     roomsSet = [];
     setArea = [];
     roomAreas = document.getElementsByClassName('roomArea');
+    roomEquips = document.getElementsByClassName('roomEquip');
 
     var checkBox = document.getElementsByClassName("checkbox__square");
-    for(let i = 0; i < checkBox.length; i++) {
+    for (let i = 0; i < checkBox.length; i++) {
         checkBox[i].innerHTML = "";
     }
 
-    for (let i = 0; i < roomAreas.length; i++) {
+    for (let i = 0; i < (roomAreas.length + roomEquips.length); i++) {
         setArea.push(true);
         checkMark(i);
     }
@@ -40,6 +43,7 @@ function reloadSett() {
             }
         }
     }
+
 
     if (sortDirection == 0 || sortDirection == 1) {
         roomsSet = sortRooms(roomsSet, 'area', 'ASC');
@@ -65,8 +69,35 @@ function reloadSett() {
     }
 }
 
+
+function isEquiped(room, equipment) {
+    var roomEquip = room.equipment;
+
+    for (let i = 0; i < roomEquip.length; i++) {
+        if (roomEquip[i] == equipment) {
+
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function isRoomInArray(roomArray, room) {
+
+    for (let i = 0; i < roomArray.length; i++) {
+        if (roomArray[i].id == room.id) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
 function setSettings() {
     roomsSet = [];
+
     for (let i = 0; i < roomAreas.length; i++) {
         if (setArea[i]) {
             for (let j = 0; j < input.length; j++) {
@@ -77,7 +108,37 @@ function setSettings() {
             }
         }
     }
-    
+
+    var roomsEq = [];
+    for (let i = roomAreas.length; i < setArea.length; i++) {
+        if (setArea[i]) {
+            for (let j = 0; j < input.length; j++) {
+                if (isEquiped(input[j], settEquip[i - roomAreas.length])) {
+                    roomsEq.push(input[j]);
+                }
+            }
+
+        }
+    }
+
+
+    var roomAll = [];
+
+    for (let i = 0; i < roomsSet.length; i++) {
+
+        for (let j = 0; j < roomsEq.length; j++) {
+
+            if (roomsSet[i].id == roomsEq[j].id) {
+
+                roomAll.push(roomsEq[j]);
+                break;
+            }
+        }
+    }
+
+    roomsSet = [];
+    roomsSet = roomAll;
+
     if (sortDirection == 0 || sortDirection == 1) {
         roomsSet = sortRooms(roomsSet, 'area', 'ASC');
     }
@@ -103,6 +164,8 @@ function checkMark(id) {
     var checkBox = document.getElementsByClassName("checkbox__square");
     var curCheck = checkBox[id];
 
+    //console.log(curCheck.innerHTML);
+
     if (curCheck.innerHTML == "") {
         let avatar = document.createElement('img');
         avatar.className = "checkbox_check";
@@ -127,20 +190,16 @@ function settingsArea(id) {
     setSettings();
 }
 
-reloadSett();
+function settingsEquip(equipment, id) {
+    if (setArea[id]) {
+        setArea[id] = false;
+    } else {
+        setArea[id] = true;
 
-function isEquiped(room, equipment){
-  var roomEquip = room.equipment;
-
-  for(let i = 0; i < roomEquip.length; i++){
-      if(roomEquip[i] == equipment){
-          console.log(equipment);
-          return true;
-      }
-  }
-
-  return false;
+    }
+    checkMark(id);
+    setSettings();
 }
 
 
-var yay = isEquiped(roomsSet[0],"empty.png");
+reloadSett();
