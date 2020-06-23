@@ -9,12 +9,24 @@ let sortDirection = 0;
 let roomAreas = document.getElementsByClassName('roomArea');
 let roomEquips = document.getElementsByClassName('roomEquip');
 
+let priceRange = [];
+
+
+
+
 function reloadSett() {
     settings = [];
     roomsSet = [];
     setArea = [];
     roomAreas = document.getElementsByClassName('roomArea');
     roomEquips = document.getElementsByClassName('roomEquip');
+
+    document.getElementById("from").value = "";
+    document.getElementById("from").placeholder = "от 100";
+    document.getElementById("to").value = "";
+    document.getElementById("to").placeholder = "до 600";
+    priceRange = [100, 600];
+
 
     var checkBox = document.getElementsByClassName("checkbox__square");
     for (let i = 0; i < checkBox.length; i++) {
@@ -128,7 +140,9 @@ function setSettings() {
 
         for (let j = 0; j < roomsEq.length; j++) {
 
-            if (roomsSet[i].id == roomsEq[j].id) {
+            if (roomsSet[i].id == roomsEq[j].id &&
+                roomsEq[j].price >= priceRange[0] &&
+                roomsEq[j].price <= priceRange[1]) {
 
                 roomAll.push(roomsEq[j]);
                 break;
@@ -200,6 +214,26 @@ function settingsEquip(equipment, id) {
     checkMark(id);
     setSettings();
 }
+
+function priceFilter(id) {
+
+    if ((id == 0 && Number.parseInt(document.getElementsByClassName("setting__input")[id].value) < priceRange[1]) ||
+        (id == 1 && Number.parseInt(document.getElementsByClassName("setting__input")[id].value) > priceRange[0])) {
+        priceRange[id] = Number.parseInt(document.getElementsByClassName("setting__input")[id].value);
+        document.getElementById("wrong_input").innerHTML = "";
+
+    } else {
+        if (id == 0) {
+            document.getElementsByClassName("setting__input")[id].value = priceRange[1];
+            priceRange[0] =priceRange[1];
+        } else {
+            document.getElementsByClassName("setting__input")[id].value = priceRange[0];
+            priceRange[1] =priceRange[0]; 
+        }
+    }
+    setSettings();
+}
+
 
 
 reloadSett();
