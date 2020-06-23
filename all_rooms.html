@@ -139,7 +139,7 @@
                         Акция действует при размещении<br>
                         в номерах “Люкс” и “Супер-Люкс”</div>
                 </div>
-                <div class="main-banner__button">
+                <div class="main-banner__button" onclick="promoSettings('Люкс')">
                     <div class="main-banner__button-text">Забронировать</div>
                     <div class="main-banner__button-img"><img src="./src/img/png/paw.png" alt=""></div>
                 </div>
@@ -210,7 +210,6 @@
 
 
     <script>
-        var element1 = document.getElementById("searching__result_content");
         var x, i, j, l, ll, selElmnt, a, b, c;
         /*look for any elements with the class "custom-select":*/
         x = document.getElementsByClassName("custom-select");
@@ -248,31 +247,10 @@
                                 y[k].removeAttribute("class");
                             }
                             this.setAttribute("class", "same-as-selected");
-                            //console.log(h.innerHTML + ' ' + i);
 
-
-                            element1.innerHTML = "";
-                            var sort;
                             sortDirection = i;
-                            if (i == 0 || i == 1) {
-                                sort = sortRooms(roomsSet, 'area', 'ASC');
-                            }
-                            if (i == 2) {
-                                sort = sortRooms(roomsSet, 'area', 'DESC');
-                            }
-                            if (i == 3) {
-                                sort = sortRooms(roomsSet, 'price', 'ASC');
-                            }
-                            if (i == 4) {
-                                sort = sortRooms(roomsSet, 'price', 'DESC');
-                            }
-
-                            //sortedInput = sortRooms(sortedInput, 'area', 'DESC');
-
-                            for (let i = 0; i < sort.length; i++) {
-
-                                element1.appendChild(generateRoom(sort[i]));
-                            } //
+                            sortRoomsDirection(i);
+                            showRooms();
                             break;
                         }
                     }

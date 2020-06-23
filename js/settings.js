@@ -11,7 +11,31 @@ let roomEquips = document.getElementsByClassName('roomEquip');
 
 let priceRange = [];
 
+function showRooms(){
 
+    var element1 = document.getElementById("searching__result_content");
+    element1.innerHTML = "";
+
+    for (let i = 0; i < roomsSet.length; i++) {
+
+        element1.appendChild(generateRoom(roomsSet[i]));
+    }
+}
+
+function sortRoomsDirection(i){
+    if (i == 0 || i == 1) {
+        roomsSet = sortRooms(roomsSet, 'area', 'ASC');
+    }
+    if (i == 2) {
+        roomsSet = sortRooms(roomsSet, 'area', 'DESC');
+    }
+    if (i == 3) {
+        roomsSet = sortRooms(roomsSet, 'price', 'ASC');
+    }
+    if (i == 4) {
+        roomsSet = sortRooms(roomsSet, 'price', 'DESC');
+    }
+}
 
 
 function reloadSett() {
@@ -56,29 +80,10 @@ function reloadSett() {
         }
     }
 
+    sortRoomsDirection(sortDirection);
 
-    if (sortDirection == 0 || sortDirection == 1) {
-        roomsSet = sortRooms(roomsSet, 'area', 'ASC');
-    }
-    if (sortDirection == 2) {
-        roomsSet = sortRooms(roomsSet, 'area', 'DESC');
-    }
-    if (sortDirection == 3) {
-        roomsSet = sortRooms(roomsSet, 'price', 'ASC');
-    }
-    if (sortDirection == 4) {
-        roomsSet = sortRooms(roomsSet, 'price', 'DESC');
-    }
+    showRooms();
 
-    //console.log(sortDirection);
-
-    var element1 = document.getElementById("searching__result_content");
-    element1.innerHTML = "";
-
-    for (let i = 0; i < roomsSet.length; i++) {
-
-        element1.appendChild(generateRoom(roomsSet[i]));
-    }
 }
 
 
@@ -153,32 +158,13 @@ function setSettings() {
     roomsSet = [];
     roomsSet = roomAll;
 
-    if (sortDirection == 0 || sortDirection == 1) {
-        roomsSet = sortRooms(roomsSet, 'area', 'ASC');
-    }
-    if (sortDirection == 2) {
-        roomsSet = sortRooms(roomsSet, 'area', 'DESC');
-    }
-    if (sortDirection == 3) {
-        roomsSet = sortRooms(roomsSet, 'price', 'ASC');
-    }
-    if (sortDirection == 4) {
-        roomsSet = sortRooms(roomsSet, 'price', 'DESC');
-    }
-
-    element1.innerHTML = "";
-
-    for (let i = 0; i < roomsSet.length; i++) {
-
-        element1.appendChild(generateRoom(roomsSet[i]));
-    }
+    sortRoomsDirection(sortDirection);
+    showRooms();
 }
 
 function checkMark(id) {
     var checkBox = document.getElementsByClassName("checkbox__square");
     var curCheck = checkBox[id];
-
-    //console.log(curCheck.innerHTML);
 
     if (curCheck.innerHTML == "") {
         let avatar = document.createElement('img');
@@ -225,15 +211,53 @@ function priceFilter(id) {
     } else {
         if (id == 0) {
             document.getElementsByClassName("setting__input")[id].value = priceRange[1];
-            priceRange[0] =priceRange[1];
+            priceRange[0] = priceRange[1];
         } else {
             document.getElementsByClassName("setting__input")[id].value = priceRange[0];
-            priceRange[1] =priceRange[0]; 
+            priceRange[1] = priceRange[0];
         }
     }
     setSettings();
 }
 
+function promoSettings(promo) {
+    reloadSett();
+    var roomPromo = [];
 
+    for (let i = 0; i < roomsSet.length; i++) {
+        if (roomsSet[i].name.search(promo) >= 0) {
+            roomPromo.push(roomsSet[i]);
+        }
+    }
+
+    roomsSet = [];
+    roomsSet = roomPromo;
+
+    setArea[0] = false;
+    checkMark(0);
+    setArea[1] = false;
+    checkMark(1);
+    setArea[2] = false;
+    checkMark(2);
+    setArea[3] = false;
+    checkMark(3);
+    setArea[6] = false;
+    checkMark(6);
+
+    document.getElementById("from").value = "500";
+    document.getElementById("from").placeholder = "от 500";
+    document.getElementById("to").value = "600";
+    document.getElementById("to").placeholder = "до 600";
+    priceRange = [500, 600];
+
+
+    showRooms();
+    window.scrollTo(0, 0);
+
+}
 
 reloadSett();
+/*
+var path = window.location.pathname;
+var page = path.split("/").pop();
+console.log( page );*/
