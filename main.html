@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,10 +19,18 @@
                 <img id="header__logo_img" src="./src/img/png/header_logo.png" alt="">
             </div>
             <div id="header__menu">
-                <div class="header__menu_point">Почему мы?</div>
-                <div class="header__menu_point">Номера</div>
-                <div class="header__menu_point">Отзывы</div>
-                <div class="header__menu_point">Как нас найти</div>
+                <a href="./main.html#whyUs">
+                    <div class="header__menu_point">Почему мы?</div>
+                </a>
+                <a href="./main.html#rooms">
+                    <div class="header__menu_point">Номера</div>
+                </a>
+                <a href="./main.html#feedback">
+                    <div class="header__menu_point">Отзывы</div>
+                </a>
+                <a href="./main.html#contact">
+                    <div class="header__menu_point">Как нас найти</div>
+                </a>
             </div>
         </div>
     </div>
@@ -39,7 +49,7 @@
         </div>
     </div>
 
-    <div class="advantages">
+    <div class="advantages" id="whyUs">
         <div id="advantages__paw"><img src="./src/img/png/paw_background.png" alt=""></div>
         <div id="advantages__content">
             <div id="advantages__title">Почему мы?</div>
@@ -253,18 +263,30 @@
                 <img id="header__logo_img" src="./src/img/png/header_logo.png" alt="">
             </div>
             <div id="header__menu">
-                <div class="header__menu_point">Почему мы?</div>
-                <div class="header__menu_point">Номера</div>
-                <div class="header__menu_point">Отзывы</div>
-                <div class="header__menu_point">Как нас найти</div>
+                <a href="./main.html#whyUs">
+                    <div class="header__menu_point">Почему мы?</div>
+                </a>
+                <a href="./main.html#rooms">
+                    <div class="header__menu_point">Номера</div>
+                </a>
+                <a href="./main.html#feedback">
+                    <div class="header__menu_point">Отзывы</div>
+                </a>
+                <a href="./main.html#contact">
+                    <div class="header__menu_point">Как нас найти</div>
+                </a>
             </div>
         </div>
         <hr>
         <div id="footer__info">
-            <div id="footer__info_1"><div id="vector" ><img src="./src/img/png/Vector.png" alt=""></div><div>2019 Все права защищены</div></div>
+            <div id="footer__info_1">
+                <div id="vector"><img src="./src/img/png/Vector.png" alt=""></div>
+                <div>2019 Все права защищены</div>
+            </div>
             <div id="footer__info_2">Политика конфиденциальности</div>
         </div>
     </div>
+    <script src="./js/button_booking.js"></script>
 </body>
 
 </html>

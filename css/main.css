@@ -36,6 +36,10 @@ html {
     flex-direction: row;
 }
 
+#header__menu a{
+    text-decoration: none;
+}
+
 #header__logo_img {
     width: 63px;
     height: 52px;
@@ -75,6 +79,10 @@ html {
     align-items: center;
 
     margin-top: 40px;
+}
+
+.main-banner__button:hover{
+    cursor: pointer;
 }
 
 #main-banner__text-city {
