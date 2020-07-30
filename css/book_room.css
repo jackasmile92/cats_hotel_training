@@ -1,0 +1,47 @@
+.main_room {
+    width: 100%;
+    margin-top: 70px;
+    max-width: 1366px;
+}
+
+.main_room__content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 98px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.main_room__small_pictures {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main_room__small_picture {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.small_picture_white_overlay {
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.small_picture,
+.small_picture_white_overlay {
+    width: 70px;
+    height: 112px;
+}
+
+.main_room__big_picture {
+    margin-left: 30px;
+}
+
+.main_room__big_picture img {
+    width: 500px;
+    height: 396px;
+    border-radius: 8px;
+}
