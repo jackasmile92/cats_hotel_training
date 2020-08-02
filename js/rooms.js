@@ -94,8 +94,8 @@ function generateRoom(room) {
     roomResult.appendChild(roomtext_3);
 
 
-
-
+    let roomtext_4_a = document.createElement('a');
+    roomtext_4_a.href = './book_room.html#' + room.id;
 
     let roomtext_4 = document.createElement('div');
     roomtext_4.className = "room__button";
@@ -111,7 +111,9 @@ function generateRoom(room) {
     roomtext_4.appendChild(roomtext_4_1);
     roomtext_4.appendChild(roomtext_4_2);
 
-    roomResult.appendChild(roomtext_4);
+    roomtext_4_a.appendChild(roomtext_4);
+
+    roomResult.appendChild(roomtext_4_a);
     roomCard.appendChild(roomResult);
 
     return roomCard;

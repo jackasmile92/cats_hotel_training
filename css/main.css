@@ -9,6 +9,10 @@ html {
     margin: auto;
 }
 
+a{
+    text-decoration: none;
+}
+
 .header,
 .main-banner {
     width: 100%;
