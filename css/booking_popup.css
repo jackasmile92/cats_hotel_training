@@ -1,0 +1,158 @@
+#popup__background {
+    width: 570px;
+    height: 649px;
+    background: #FFFEFD;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#popup__paw {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+
+#popup__close {
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+}
+
+#popup__content {
+    margin-left: 70px;
+    margin-top: 14px;
+    width: 430px;
+}
+
+#popup__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    margin-left: 56px;
+    margin-bottom: 50px;
+}
+
+#submit__booking_button {
+    width: 230px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#submit__booking_button .room__button-paw,
+#submit__booking_button input {
+    position: absolute;
+}
+
+#submit__booking_button input {
+    margin-top: 0px;
+    width: 230px;
+    height: 50px;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    padding-left: 32px;
+}
+
+#submit__booking_button .room__button-paw {
+    width: 36px;
+    height: 36px;
+    margin-right: 7px;
+    margin-left: 187px;
+    margin-top: 7px;
+    margin-bottom: auto;
+}
+
+.popup__field {
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 430px;
+    height: 52px;
+    margin-bottom: 20px;
+}
+
+.popup__field input {
+    margin-left: 30px;
+    width: 370px;
+    border: none;
+
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 15px;
+    margin-bottom: auto;
+}
+
+#popup__dates {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 450px;
+    margin-left: 10px;
+
+    font-family: LatoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#popup__dates__date {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: 10px;
+}
+
+
+.popup__field.date {
+    width: 129px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.popup__field.date input {
+    margin-left: 20px;
+    width: 89px;
+}
+
+#popup__container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.blur-filter {    position: absolute;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+
+}
+
+#background {
+
+    height: 100%;
+    width: 100%;
+    background-image: url(../src/img/png/cats_room/suite_cat.png);
+    background-size: contain;
+}

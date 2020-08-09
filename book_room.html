@@ -11,200 +11,248 @@
     <link rel="stylesheet" href="./css/all_rooms.css">
     <link rel="stylesheet" href="./css/book_room.css">
 
+    <link rel="stylesheet" href="./css/booking_popup.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="header__content">
-            <div id="header__logo">
-                <img id="header__logo_img" src="./src/img/png/header_logo.png" alt="">
-            </div>
-            <div id="header__menu">
-                <a href="./main.html#whyUs">
-                    <div class="header__menu_point">Почему мы?</div>
-                </a>
-                <a href="./main.html#rooms">
-                    <div class="header__menu_point">Номера</div>
-                </a>
-                <a href="./main.html#feedback">
-                    <div class="header__menu_point">Отзывы</div>
-                </a>
-                <a href="./main.html#contact">
-                    <div class="header__menu_point">Как нас найти</div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="main_room" id="super_lux">
-        <div class="main_room__content">
-            <div class="main_room__small_pictures">
-                <div class="main_room__small_picture">
-                    <div class="small_picture_white_overlay"></div>
-                    <div class="small_picture">
-                        <img src="./src/img/png/cats_room/super_lux_cat/super_lux_small_1.png" alt="">
-                    </div>
+    <div id="cat_page">
+        <div class="header">
+            <div class="header__content">
+                <div id="header__logo">
+                    <img id="header__logo_img" src="./src/img/png/header_logo.png" alt="">
                 </div>
-                <div class="main_room__small_picture">
-                    <div class="small_picture_white_overlay"></div>
-                    <div class="small_picture">
-                        <img src="./src/img/png/cats_room/super_lux_cat/super_lux_small_2.png" alt="">
-                    </div>
-                </div>
-                <div class="main_room__small_picture">
-                    <div class="small_picture_white_overlay"></div>
-                    <div class="small_picture">
-                        <img src="./src/img/png/cats_room/super_lux_cat/super_lux_small_3.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="main_room__big_picture">
-                <img src="./src/img/png/cats_room/super_lux_cat/super_lux.png" alt="">
-            </div>
-            <div class="result__room_body" id = "main_room_text">
-                <div class="result__room_title">Супер-Люкс</div>
-                <div class="result__room_text">Размеры (ШхГхВ) - 180х160х180 см</div>
-                <div class="result__room_text">Площадь - 2,88 м2</div>
-                <div class="result__room_text">Оснащение номера</div>
-                <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/bed.png" alt="">
-                    <div class="result__room_text">Лежак</div>
-                </div>
-                <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/house.png" alt="">
-                    <div class="result__room_text">Домик</div>
-                </div>
-                <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/games.png" alt="">
-                    <div class="result__room_text">Игровой комплекс - 3 яруса</div>
-                </div>
-                <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/claw.png" alt="">
-                    <div class="result__room_text">Когтеточка</div>
-                </div>
-                <div class="result__room_equip room_price">Цена за сутки:<div class="result__room_price">600₽</div>
-                </div>
-                <div class="room__button">
-                    <div class="room__button-text">Забронировать</div>
-                    <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
+                <div id="header__menu">
+                    <a href="./main.html#whyUs">
+                        <div class="header__menu_point">Почему мы?</div>
+                    </a>
+                    <a href="./main.html#rooms">
+                        <div class="header__menu_point">Номера</div>
+                    </a>
+                    <a href="./main.html#feedback">
+                        <div class="header__menu_point">Отзывы</div>
+                    </a>
+                    <a href="./main.html#contact">
+                        <div class="header__menu_point">Как нас найти</div>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
 
-
-
-    <div id="rooms">
-        <div id="rooms__fish"><img src="./src/img/png/fish.png" alt=""></div>
-        <div id="rooms__content">
-            <div id="rooms__title">Другие номера</div>
-            <div class="room">
-                <div class="room__cat"></div>
-                <div class="room__rect">
-                    <div class="room__content">
-                        <div class="room__name">Эконом плюс</div>
-                        <div class="room__point">
-                            <div class="nav_circle yellow"></div>
-                            <div class="room__point-text">Площадь - 0,90 м2</div>
+        <div class="main_room" id="super_lux">
+            <div class="main_room__content">
+                <div class="main_room__small_pictures">
+                    <div class="main_room__small_picture">
+                        <div class="small_picture_white_overlay"></div>
+                        <div class="small_picture">
+                            <img src="./src/img/png/cats_room/super_lux_cat/super_lux_small_1.png" alt="">
                         </div>
-                        <div class="room__point">
-                            <div class="nav_circle yellow"></div>
-                            <div class="room__point-text">Размеры (ШхГхВ) — 90х100х180 см</div>
+                    </div>
+                    <div class="main_room__small_picture">
+                        <div class="small_picture_white_overlay"></div>
+                        <div class="small_picture">
+                            <img src="./src/img/png/cats_room/super_lux_cat/super_lux_small_2.png" alt="">
                         </div>
-                        <div class="room__point">
-                            <div class="nav_circle yellow"></div>
-                            <div class="room__point-text">Цена за сутки: 200₽</div>
-                        </div>
-                        <div class="room__button">
-                            <div class="room__button-text">Забронировать</div>
-                            <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
+                    </div>
+                    <div class="main_room__small_picture">
+                        <div class="small_picture_white_overlay"></div>
+                        <div class="small_picture">
+                            <img src="./src/img/png/cats_room/super_lux_cat/super_lux_small_3.png" alt="">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="rooms_nav">
-                <div class="nav_circles">
-                    <div class="nav_circle yellow"></div>
-                    <div class="nav_circle gray"></div>
-                    <div class="nav_circle gray"></div>
+                <div class="main_room__big_picture">
+                    <img src="./src/img/png/cats_room/super_lux_cat/super_lux.png" alt="">
                 </div>
-            </div>
-            <div id="navigation">
-                <div class="navigation__arrows">
-                    <div class="nav-arrow left"><img src="./src/img/png/arrow_l.png" alt=""></div>
-                    <div class="nav-arrow right"><img src="./src/img/png/arrow_r.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="contact">
-        <div id="contact__info">
-            <div id="contact__info_content">
-                <div id="contact__content_title">Как нас найти</div>
-                <div class="contact__content_point">
-                    <div class="contact__point_title">Адрес</div>
-                    <div class="contact__point_content">Санкт-Петербург,<br>ул Большая Конюшенная, д 19</div>
-                </div>
-                <div class="contact__content_point">
-                    <div class="contact__point_title">Режим работы</div>
-                    <div class="contact__point_content">Ежедневно, с 9:00 до 20:00</div>
-                </div>
-                <div class="contact__content_point">
-                    <div class="contact__point_title">Телефон</div>
-                    <div class="contact__point_content">8 (800) 333-55-99</div>
-                </div>
-                <div class="contact__content_point">
-                    <div class="contact__point_title">E-mail</div>
-                    <div class="contact__point_content">info@cat-hotel.ru</div>
-                </div>
-                <div id="contact__content_social">
-                    <div class="contact__point_title">Социальные сети</div>
-
-                    <div id="contact__social_icons">
-                        <div class="contact__social"><img src="./src/img/png/facebook.png" alt=""></div>
-                        <div class="contact__social"><img src="./src/img/png/insagram.png" alt=""></div>
-                        <div class="contact__social"><img src="./src/img/png/vk.png" alt=""></div>
+                <div class="result__room_body" id="main_room_text">
+                    <div class="result__room_title">Супер-Люкс</div>
+                    <div class="result__room_text">Размеры (ШхГхВ) - 180х160х180 см</div>
+                    <div class="result__room_text">Площадь - 2,88 м2</div>
+                    <div class="result__room_text">Оснащение номера</div>
+                    <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/bed.png"
+                            alt="">
+                        <div class="result__room_text">Лежак</div>
+                    </div>
+                    <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/house.png"
+                            alt="">
+                        <div class="result__room_text">Домик</div>
+                    </div>
+                    <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/games.png"
+                            alt="">
+                        <div class="result__room_text">Игровой комплекс - 3 яруса</div>
+                    </div>
+                    <div class="result__room_equip"><img class="room_equip" src="./src/img/png/equipment/claw.png"
+                            alt="">
+                        <div class="result__room_text">Когтеточка</div>
+                    </div>
+                    <div class="result__room_equip room_price">Цена за сутки:<div class="result__room_price">600₽</div>
+                    </div>
+                    <div class="room__button">
+                        <div class="room__button-text">Забронировать</div>
+                        <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="contact__map">
-            <div id="contact__map_img"><img src="./src/img/png/map.png" alt=""></div>
-            <div id="contact__map_cat"><img src="./src/img/png/map_cat.png" alt=""></div>
+
+
+
+        <div id="rooms">
+            <div id="rooms__fish"><img src="./src/img/png/fish.png" alt=""></div>
+            <div id="rooms__content">
+                <div id="rooms__title">Другие номера</div>
+                <div class="room">
+                    <div class="room__cat"></div>
+                    <div class="room__rect">
+                        <div class="room__content">
+                            <div class="room__name">Эконом плюс</div>
+                            <div class="room__point">
+                                <div class="nav_circle yellow"></div>
+                                <div class="room__point-text">Площадь - 0,90 м2</div>
+                            </div>
+                            <div class="room__point">
+                                <div class="nav_circle yellow"></div>
+                                <div class="room__point-text">Размеры (ШхГхВ) — 90х100х180 см</div>
+                            </div>
+                            <div class="room__point">
+                                <div class="nav_circle yellow"></div>
+                                <div class="room__point-text">Цена за сутки: 200₽</div>
+                            </div>
+                            <div class="room__button">
+                                <div class="room__button-text">Забронировать</div>
+                                <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="rooms_nav">
+                    <div class="nav_circles">
+                        <div class="nav_circle yellow"></div>
+                        <div class="nav_circle gray"></div>
+                        <div class="nav_circle gray"></div>
+                    </div>
+                </div>
+                <div id="navigation">
+                    <div class="navigation__arrows">
+                        <div class="nav-arrow left"><img src="./src/img/png/arrow_l.png" alt=""></div>
+                        <div class="nav-arrow right"><img src="./src/img/png/arrow_r.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div id="contact__info">
+                <div id="contact__info_content">
+                    <div id="contact__content_title">Как нас найти</div>
+                    <div class="contact__content_point">
+                        <div class="contact__point_title">Адрес</div>
+                        <div class="contact__point_content">Санкт-Петербург,<br>ул Большая Конюшенная, д 19</div>
+                    </div>
+                    <div class="contact__content_point">
+                        <div class="contact__point_title">Режим работы</div>
+                        <div class="contact__point_content">Ежедневно, с 9:00 до 20:00</div>
+                    </div>
+                    <div class="contact__content_point">
+                        <div class="contact__point_title">Телефон</div>
+                        <div class="contact__point_content">8 (800) 333-55-99</div>
+                    </div>
+                    <div class="contact__content_point">
+                        <div class="contact__point_title">E-mail</div>
+                        <div class="contact__point_content">info@cat-hotel.ru</div>
+                    </div>
+                    <div id="contact__content_social">
+                        <div class="contact__point_title">Социальные сети</div>
+
+                        <div id="contact__social_icons">
+                            <div class="contact__social"><img src="./src/img/png/facebook.png" alt=""></div>
+                            <div class="contact__social"><img src="./src/img/png/insagram.png" alt=""></div>
+                            <div class="contact__social"><img src="./src/img/png/vk.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact__map">
+                <div id="contact__map_img"><img src="./src/img/png/map.png" alt=""></div>
+                <div id="contact__map_cat"><img src="./src/img/png/map_cat.png" alt=""></div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="header__content">
+                <div id="header__logo">
+                    <img id="header__logo_img" src="./src/img/png/header_logo.png" alt="">
+                </div>
+                <div id="header__menu">
+                    <a href="./main.html#whyUs">
+                        <div class="header__menu_point">Почему мы?</div>
+                    </a>
+                    <a href="./main.html#rooms">
+                        <div class="header__menu_point">Номера</div>
+                    </a>
+                    <a href="./main.html#feedback">
+                        <div class="header__menu_point">Отзывы</div>
+                    </a>
+                    <a href="./main.html#contact">
+                        <div class="header__menu_point">Как нас найти</div>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div id="footer__info">
+                <div id="footer__info_1">
+                    <div id="vector"><img src="./src/img/png/Vector.png" alt=""></div>
+                    <div>2019 Все права защищены</div>
+                </div>
+                <div id="footer__info_2">Политика конфиденциальности</div>
+            </div>
         </div>
     </div>
+    <div id="popup__container">
+        <div id="popup__background">
+            <div id="popup__paw"><img src="./src/img/png/popup_paw.png" alt=""></div>
+            <div id="popup__close"><img src="./src/img/png/close_x.png"></div>
+            <div id="popup__content">
 
-    <div id="footer">
-        <div class="header__content">
-            <div id="header__logo">
-                <img id="header__logo_img" src="./src/img/png/header_logo.png" alt="">
+                <div id="popup__title">Забронировать номер</div>
+                <form action="">
+                    <div class="popup__field"><input type="text" name="name" placeholder="Ваше имя">
+                    </div>
+                    <div class="popup__field"><input type="text" name="petname" placeholder="Имя питомца">
+                    </div>
+                    <div class="popup__field"><input name="tel" placeholder="Телефон" title="+7 и десять цифр">
+                    </div>
+                    <div class="popup__field"><input name="email" placeholder="E-mail">
+                    </div>
+                    <div id="popup__dates">
+                        Дата заезда
+                        <div id="popup__dates__date">
+                            с
+                            <div class="popup__field date"><input type="date" name="datefrom" placeholder="26.01.2020">
+                            </div>
+
+                            по
+                            <div class="popup__field date"><input type="date" name="dateto" placeholder="26.02.2020">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="submit__booking_button">
+                        <input type="submit" class="room__button" value="Отправить заявку">
+                        </input>
+                        <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
+                    </div>
+                </form>
             </div>
-            <div id="header__menu">
-                <a href="./main.html#whyUs">
-                    <div class="header__menu_point">Почему мы?</div>
-                </a>
-                <a href="./main.html#rooms">
-                    <div class="header__menu_point">Номера</div>
-                </a>
-                <a href="./main.html#feedback">
-                    <div class="header__menu_point">Отзывы</div>
-                </a>
-                <a href="./main.html#contact">
-                    <div class="header__menu_point">Как нас найти</div>
-                </a>
-            </div>
-        </div>
-        <hr>
-        <div id="footer__info">
-            <div id="footer__info_1">
-                <div id="vector"><img src="./src/img/png/Vector.png" alt=""></div>
-                <div>2019 Все права защищены</div>
-            </div>
-            <div id="footer__info_2">Политика конфиденциальности</div>
         </div>
     </div>
     <script src="./js/input.js"></script>
     <script src="./js/rooms.js"></script>
     <script src="./js/button_booking.js"></script>
     <script src="./js/room_booking.js"></script>
+    <script src="./js/booking_popup.js"></script>
 </body>
 
 </html>
