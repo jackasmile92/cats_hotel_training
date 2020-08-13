@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Котейка</title>
+    <meta name="description" content="Уютная гостиница для котов и кошек">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all_rooms.css">
+    <link rel="stylesheet" href="./css/book_room.css">
+
+    <link rel="stylesheet" href="./css/booking_popup.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+</head>
+
+<body>
+
+    <div id="rooms">
+        <div id="rooms__fish"><img src="./src/img/png/fish.png" alt=""></div>
+        <div id="rooms__content">
+            <div id="rooms__title">Другие номера</div>
+            <div class="room__row">
+                <div>
+                    <div class="room">
+                        <div class="room__cat"></div>
+                        <div class="room__rect">
+                            <div class="room__content">
+                                <div class="room__name">Эконом плюс</div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Площадь - 0,90 м2</div>
+                                </div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Размеры (ШхГхВ) — 90х100х180 см</div>
+                                </div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Цена за сутки: 200₽</div>
+                                </div>
+                                <div class="room__button">
+                                    <div class="room__button-text">Забронировать</div>
+                                    <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="room">
+                        <div class="room__cat"></div>
+                        <div class="room__rect">
+                            <div class="room__content">
+                                <div class="room__name">Эконом плюс(2)</div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Площадь - 0,90 м2</div>
+                                </div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Размеры (ШхГхВ) — 90х100х180 см</div>
+                                </div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Цена за сутки: 200₽</div>
+                                </div>
+                                <div class="room__button">
+                                    <div class="room__button-text">Забронировать</div>
+                                    <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="room">
+                        <div class="room__cat"></div>
+                        <div class="room__rect">
+                            <div class="room__content">
+                                <div class="room__name">Эконом плюс(3)</div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Площадь - 0,90 м2</div>
+                                </div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Размеры (ШхГхВ) — 90х100х180 см</div>
+                                </div>
+                                <div class="room__point">
+                                    <div class="nav_circle yellow"></div>
+                                    <div class="room__point-text">Цена за сутки: 200₽</div>
+                                </div>
+                                <div class="room__button">
+                                    <div class="room__button-text">Забронировать</div>
+                                    <div class="room__button-paw"><img src="./src/img/png/paw_reverse.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="rooms_nav">
+                <div class="nav_circles">
+                    <div class="nav_circle yellow"></div>
+                    <div class="nav_circle gray"></div>
+                    <div class="nav_circle gray"></div>
+                </div>
+            </div>
+            <div id="navigation">
+                <div class="navigation__arrows">
+                    <div class="nav-arrow left"><img src="./src/img/png/arrow_l.png" alt=""></div>
+                    <div class="nav-arrow right"><img src="./src/img/png/arrow_r.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./js/input.js"></script>
+    <script src="./js/rooms.js"></script>
+    <script src="./js/button_booking.js"></script>
+    <script src="./js/room_booking.js"></script>
+    <script src="./js/booking_popup.js"></script>
+-->
+    <script>
+        var slider = tns({
+            container: '.room__row',
+            items: 1,
+            prevButton: '.nav-arrow.left img',
+            nextButton: '.nav-arrow.right img',
+            navContainer: ".nav_circles"
+        });
+    </script>
+
+    <script>
+        $(".nav_circle").on("click", function () {
+            $(".nav_circle").css("background", "#E1E1E1");
+            $(this).css("background", "#FAC663");
+        })
+    </script>
+</body>
+
+</html>
