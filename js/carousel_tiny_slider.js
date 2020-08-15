@@ -13,7 +13,12 @@
         nextButton: '#feedback__nav__right img',
         navContainer: "#feedback_nav_circles"
     });
-    $(".nav_circle").on("click", function () {
-        $(".nav_circle").css("background", "#E1E1E1");
+    $("#rooms_nav .nav_circle").on("click", function () {
+        $("#rooms_nav .nav_circle").css("background", "#E1E1E1");
+        $(this).css("background", "#FAC663");
+    })
+
+    $("#feedback_nav .nav_circle").on("click", function () {
+        $("#feedback_nav .nav_circle").css("background", "#E1E1E1");
         $(this).css("background", "#FAC663");
     })
