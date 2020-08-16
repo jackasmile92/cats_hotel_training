@@ -1,24 +1,60 @@
+var slider = tns({
+    container: '.room__row',
+    items: 1,
+    prevButton: '.nav-arrow.left img',
+    nextButton: '.nav-arrow.right img',
+    navContainer: ".nav_circles"
+});
 
-    var slider = tns({
-        container: '.room__row',
-        items: 1,
-        prevButton: '.nav-arrow.left img',
-        nextButton: '.nav-arrow.right img',
-        navContainer: ".nav_circles"
-    });
-    var feedbackSlider = tns({
-        container: '#feedback__row',
-        items: 2,
-        prevButton: '#feedback__nav__left img',
-        nextButton: '#feedback__nav__right img',
-        navContainer: "#feedback_nav_circles"
-    });
-    $("#rooms_nav .nav_circle").on("click", function () {
-        $("#rooms_nav .nav_circle").css("background", "#E1E1E1");
-        $(this).css("background", "#FAC663");
-    })
+function navColors(direction) {
 
-    $("#feedback_nav .nav_circle").on("click", function () {
-        $("#feedback_nav .nav_circle").css("background", "#E1E1E1");
-        $(this).css("background", "#FAC663");
-    })
+    let elements = $("#rooms_nav .nav_circle");
+    var x = 0;
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].style.background == "rgb(250, 198, 99)") {
+            x = i;
+        }
+    }
+    $("#rooms_nav .nav_circle").css("background", "#E1E1E1");
+    if (direction == "left") {
+        if (x == 0) {
+            $(elements[elements.length-1]).css("background", "#FAC663");
+        } else {
+            $(elements[x - 1]).css("background", "#FAC663");
+        }
+    }else{
+        if (x == elements.length-1) {
+            $(elements[0]).css("background", "#FAC663");
+        } else {
+            $(elements[x + 1]).css("background", "#FAC663");
+        }
+    }
+}
+
+$("#rooms__nav__left img").on("click", function () {
+    navColors("left");
+})
+
+$("#rooms__nav__right img").on("click", function () {
+    navColors("right");
+})
+
+$("#rooms_nav .nav_circle").on("click", function () {
+    $("#rooms_nav .nav_circle").css("background", "#E1E1E1");
+    $(this).css("background", "#FAC663");
+})
+
+$("#feedback_nav .nav_circle").on("click", function () {
+    $("#feedback_nav .nav_circle").css("background", "#E1E1E1");
+    $(this).css("background", "#FAC663");
+})
+
+$("#rooms_nav .nav_circle").css("background", "#E1E1E1");
+var elements = $("#rooms_nav .nav_circle");
+$(elements[0]).css("background", "#FAC663");
+
+
+
+
+//"#FAC663" = rgb(250, 198, 99)
+//"#E1E1E1" = rgb(225, 225, 225)
